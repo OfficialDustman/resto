@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 16px;
+  /* font-size: 16px; */
   overflow-x: hidden;
   scroll-padding-top: 5.5rem;
   scroll-behavior: smooth;
@@ -605,7 +605,7 @@ footer {
   }
 
   .icons {
-    gap: 0.4rem;
+    gap: 6.4px;
     font-size: 0.8rem;
   }
 
@@ -625,7 +625,7 @@ footer {
 
   .dishesContainer,
   .menuContainer {
-    gap: 2rem;
+    gap: 32px;
   }
 
   .aboutContainer img {
@@ -634,10 +634,16 @@ footer {
 
   .bestFood {
     width: 80%;
+    gap: 12.8px;
   }
 
   .abt {
     flex-direction: column;
+    gap: 16px;
+  }
+
+  .check {
+    gap: 32px;
   }
 
   #order form {
@@ -652,6 +658,7 @@ footer {
 
   .box-container {
     flex-direction: column;
+    gap: 32px;
   }
 
   .dishImg > img {
