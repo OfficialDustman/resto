@@ -1,43 +1,34 @@
-const list = document.querySelectorAll('.ul a'),
-      nav = document.querySelector('.ul'),
-      bar = document.querySelector('.icons > :first-child');
+const list = document.querySelectorAll(".ul a"),
+  nav = document.querySelector(".ul"),
+  bar = document.querySelector(".icons > :first-child"),
+  moon = document.querySelector(".fa-moon");
 
 list.forEach((lists) => {
-
-    lists.onclick = function(){
-        
-        for (let i = 0;  i < list.length; i++) {
-            if (list[i].classList = 'li-active') {
-                list[i].classList.remove('li-active')
-            }
-        }
-
-        lists.classList.add('li-active')
+  lists.onclick = function () {
+    for (let i = 0; i < list.length; i++) {
+      if ((list[i].classList = "li-active")) {
+        list[i].classList.remove("li-active");
+      }
     }
-  });
 
-bar.onclick = function(){
+    lists.classList.add("li-active");
+  };
+});
 
-    bar.classList.toggle('fa-xmark')
-    nav.classList.toggle('active')   
+bar.onclick = function () {
+  bar.classList.toggle("fa-xmark");
+  nav.classList.toggle("active");
+};
 
-    // if (nav.style.display === 'none') {
-    //     nav.style.display = 'flex'   
-    // } else {
-    //     nav.style.display = 'none'
-    // }
-}
-
-// let swiper = new Swiper("#home", {
-//     pagination: {
-//       el: ".swiper-pagination",
-//       dynamicBullets: true,
-//     },
-// });
+moon.onclick = function () {
+    // moon.classList.toggle("fa-moon");
+    moon.classList.toggle("fa-sun-bright");
+    // nav.classList.toggle("active");
+};
 
 let swip = new Swiper(".swiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      dynamicBullets: true,
-    },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
 });
