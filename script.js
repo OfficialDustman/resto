@@ -1,5 +1,5 @@
-const list = document.querySelectorAll('ul li'),
-      nav = document.querySelector('ul'),
+const list = document.querySelectorAll('.ul a'),
+      nav = document.querySelector('.ul'),
       bar = document.querySelector('.icons > :first-child');
 
 list.forEach((lists) => {
@@ -19,12 +19,13 @@ list.forEach((lists) => {
 bar.onclick = function(){
 
     bar.classList.toggle('fa-xmark')
+    nav.classList.toggle('active')   
 
-    if (nav.style.display === 'none') {
-        nav.style.display = 'flex'   
-    } else {
-        nav.style.display = 'none'
-    }
+    // if (nav.style.display === 'none') {
+    //     nav.style.display = 'flex'   
+    // } else {
+    //     nav.style.display = 'none'
+    // }
 }
 
 // let swiper = new Swiper("#home", {

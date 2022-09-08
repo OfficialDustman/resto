@@ -54,9 +54,10 @@ nav {
     background-color: white;
 }
 
-.logo, ul, .icons {
+.logo, .ul, .icons {
     display: flex;
     align-items: center;
+    font-size: 1rem;
     gap: 1rem;
 }
 
@@ -77,22 +78,19 @@ a, a:hover, a:visited{
     text-decoration: none;
 }
 
-ul {
+.ul {
     list-style: none;
 }
 
-li a {
+.ul a {
     color: var(--light-color);
 }
 
-ul li:hover , li a:visited, li a:active, .li-active {
-    background-color: var(--green);
+.ul a:hover , ul a:visited, .ul a:active, .li-active {
+    background-color: var(--green) !important;
     padding: 7px;
     border-radius: 7px;
-}
-
-li:hover > a , .li-active > a{
-    color: white;
+    color: white !important;
 }
 
 .icons > :first-child {
@@ -106,7 +104,7 @@ li:hover > a , .li-active > a{
     color: var(--black);
 }
 
-.icons i:hover {
+.icons i:hover, .menuImg i:hover, .dishImg i:hover {
     background-color: var(--green);
     color: white;
     transform: rotate(360deg);
@@ -228,7 +226,7 @@ h1 {
     background-color: lightgray;
     height: 3.5rem;
     border-radius: 50%;
-    transition: visibility 3s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
 }
 
 .dish:hover > .dishImg i {
@@ -326,6 +324,10 @@ h1 {
     margin-top: 1rem;
 }
 
+.menu h4, .dish h4 {
+    color: var(--black);
+}
+
 .starp {
     color: var(--light-color);
     font-size: 1.1rem;
@@ -389,6 +391,15 @@ h1 {
     border-radius: 50%;
     width: 3.85rem;
     height: 3.85rem;
+}
+
+.customerHead i {
+    font-size: 1.5rem;
+    color: lightgray;
+}
+
+.userText h4{
+    color: var(--black);
 }
 
 #order {
@@ -503,8 +514,12 @@ footer {
         display: block;
     }
 
-    ul {
+    .ul {
         display: none;
+    }
+
+    .active {
+        display: flex;
         position: absolute;
         flex-direction: column;
         margin-top: 26rem;
@@ -514,7 +529,7 @@ footer {
         border: 1px solid lightgray;
     }
 
-    li {
+    .ul > a {
         padding: 10px;
         background-color: lightgray;
         width: 97%;
@@ -526,7 +541,91 @@ footer {
     } */
 
     .details img {
-        height: inherit;
+        flex: none;
     }
+
+    .aboutContainer img {
+        width: 38rem;
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+
+.special {
+    width: 85%;
+    margin-left: -15%;
+}
+
+.special h3{
+    font-size: 1.5rem;
+}
+
+.special h1{
+    font-size: 3rem;
+}
+
+.special p{
+    font-size: 1.2rem;
+}
+
+nav {
+    margin: 0 auto;
+    /* width: 95%; */
+}
+
+.icons { 
+    gap: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.details img {
+    width: 70%;
+    margin-left: -30%;
+    margin-top: 2rem;
+    height: 85%;
+}
+
+.dish {
+    padding: 0;
+    width: inherit;
+    height: 22rem;
+    justify-content: space-evenly;
+}
+
+.dishesContainer, .menuContainer {
+    gap: 2rem;
+}
+
+
+.aboutContainer img {
+    width: 22rem;
+}
+
+.bestFood {
+    width: 80%;
+}
+
+.abt {
+    flex-direction: column;
+}
+
+#order form {
+    flex-direction: column;
+    padding-bottom: 3.8rem;
+}
+
+#order form > div {
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.box-container {
+    flex-direction: column;
+}
+
+.dishImg > img {
+    width: 10rem ;
+}
 
 }
